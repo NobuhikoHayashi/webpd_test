@@ -8,21 +8,11 @@
     <body>
         <p>test_3</p>
         <body>
-            <div id="loading">Loading ...</div>
-            <button id="startButton">Start</button>
-            
-            <div id="pdfuNote">Patch rendered to SVG using <a href="https://github.com/sebpiq/pd-fileutils">pd-fileutils</a></div>
-            <div id="svg"></div>
-            
-            <script type="text/javascript">
-                webPdExamples.init()
-                
+            <script>
                 var patch
-                $.get('pd/main.pd', function(mainStr) {
-                      // Loading the patch
-                      patch = Pd.loadPatch(mainStr)
-                      
-                      webPdExamples.patchLoaded(mainStr)
+                $.get('https://nobuhikohayashi.github.io/webpd_test/patches/myPatch.pd', function(patchStr) {
+                      patch = Pd.loadPatch(patchStr)
+                      Pd.start()
                       })
                 </script>
         </body>
