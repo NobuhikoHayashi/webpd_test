@@ -3,25 +3,29 @@
     <head>
         <script src="https://nobuhikohayashi.github.io/webpd_test/js/jquery-2.1.0.min.js" type="text/javascript"></script>
         <script src="https://nobuhikohayashi.github.io/webpd_test/js/webpd-latest.js" type="text/javascript"></script>
-        $.ajax(
-        this.patchs[0],
-        {
-        cache    : false,
-        method   : "GET",
-        timeout  : 30000
-        }
-        )
-        .then(
-        function(l) {
-        Pd.loadpatch(l);
-        Pd.start();
-        }
-        );
     </head>
     
     <body>
-        <p>test_2</p>
-    
+        <p>test_3</p>
+        <body>
+            <div id="loading">Loading ...</div>
+            <button id="startButton">Start</button>
+            
+            <div id="pdfuNote">Patch rendered to SVG using <a href="https://github.com/sebpiq/pd-fileutils">pd-fileutils</a></div>
+            <div id="svg"></div>
+            
+            <script type="text/javascript">
+                webPdExamples.init()
+                
+                var patch
+                $.get('pd/main.pd', function(mainStr) {
+                      // Loading the patch
+                      patch = Pd.loadPatch(mainStr)
+                      
+                      webPdExamples.patchLoaded(mainStr)
+                      })
+                </script>
+        </body>
     </body>
 </html>
 
