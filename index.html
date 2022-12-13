@@ -1,11 +1,11 @@
 <!doctype HTML>
 <html>
     <head>
-        <script src="../saruhikohayashi/js/jquery-2.1.0.min.js"></script>
-        <script src="../saruhikohayashi/js/webpd-latest.js"></script>
+        <script src="js/jquery-2.1.0.min.js"></script>
+        <script src="js/webpd-latest.js"></script>
         <script>
             var patch
-            $.get('../saruhikohayashi/patches/myPatch.pd', function(patchStr) {
+            $.get('patches/myPatch.pd', function(patchStr) {
                   patch = Pd.loadPatch(patchStr)
                   Pd.start()
                   })
