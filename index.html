@@ -1,11 +1,11 @@
 <!doctype HTML>
 <html>
     <head>
-        <script src="https://drive.google.com/drive/folders/1Ddc3n3_IagYc7jrJyXmUdyWWqwll5QtP?usp=share_link/js/jquery-2.1.0.min.js"></script>
-        <script src="https://drive.google.com/drive/folders/1Ddc3n3_IagYc7jrJyXmUdyWWqwll5QtP?usp=share_link/js/webpd-latest.js"></script>
+        <script src="jquery-3.6.1js"></script>
+        <script src="webpd-latest.js"></script>
         <script>
             var patch
-            $.get('https://drive.google.com/drive/folders/1Ddc3n3_IagYc7jrJyXmUdyWWqwll5QtP?usp=share_link/patches/myPatch.pd', function(patchStr) {
+            $.get('myPatch.pd', function(patchStr) {
                   patch = Pd.loadPatch(patchStr)
                   Pd.start()
                   })
