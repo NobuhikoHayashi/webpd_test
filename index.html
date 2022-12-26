@@ -1,11 +1,11 @@
 <!doctype HTML>
 <html>
     <head>
-        <script src="http://nh-voices.com/webpd/jquery-3.6.1.js"></script>
-        <script src="http://nh-voices.com/webpd/webpd-latest.js"></script>
+        <script src="jquery-3.6.1.js"></script>
+        <script src="webpd-latest.js"></script>
         <script>
             var patch
-            $.get('http://nh-voices.com/webpd/myPatch.pd', function(patchStr) {
+            $.get('myPatch.pd', function(patchStr) {
                   patch = Pd.loadPatch(patchStr)
                   Pd.start()
                   })
